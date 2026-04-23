@@ -45,6 +45,31 @@ C. Visualizacion (visualizacion)
 
 ![Evidencia de la API](./img/nav.png)
 
-6. Conclusión
+
+6. Archivos ejemplo para configuracion
+
+        base.py.example
+        def obtener_config_db():
+            return {
+                "host": "DIRECCION_IP_BASE_DATOS",
+                "dbname": "NOMBRE_DB",
+                "user": "USUARIO",
+                "password": "PASSWORD"
+            }
+        config.py.example
+        def obtener_url_api():
+            return "http://IP_DE_TU_API:8000/empleados"
+
+Debido a que este proyecto sigue buenas prácticas de seguridad, los archivos que contienen credenciales e IPs específicas (base.py y config.py) han sido excluidos del control de versiones mediante .gitignore.
+
+Para replicar este proyecto, el usuario debe:
+
+    Localizar los archivos .example en cada carpeta.
+
+    Copiar el archivo y renombrarlo eliminando la extensión .example (ej: de base.py.example a base.py).
+
+    Editar los valores internos con las IPs de sus propias máquinas virtuales creadas en Multipass.
+
+7. Conclusión
 
 El desarrollo permitió entender la importancia de la segmentación de servicios. A pesar de los retos técnicos como la gestión de IPs dinámicas y configuraciones de red en PostgreSQL, se logró un flujo de datos continuo desde la persistencia hasta la interfaz de usuario.
