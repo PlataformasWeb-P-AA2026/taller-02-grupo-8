@@ -1,0 +1,8 @@
+# base.py.example
+def obtener_config_db():
+    return {
+        "host": "DIRECCION_IP_BASE_DATOS",
+        "dbname": "NOMBRE_DB",
+        "user": "USUARIO",
+        "password": "PASSWORD"
+    }

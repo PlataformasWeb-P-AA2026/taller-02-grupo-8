@@ -1,0 +1,3 @@
+# config.py.example
+def obtener_url_api():
+    return "http://IP_DE_TU_API:8000/empleados"
