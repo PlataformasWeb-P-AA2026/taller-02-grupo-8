@@ -70,6 +70,39 @@ Para replicar este proyecto, el usuario debe:
 
     Editar los valores internos con las IPs de sus propias máquinas virtuales creadas en Multipass.
 
-7. Conclusión
 
-El desarrollo permitió entender la importancia de la segmentación de servicios. A pesar de los retos técnicos como la gestión de IPs dinámicas y configuraciones de red en PostgreSQL, se logró un flujo de datos continuo desde la persistencia hasta la interfaz de usuario.
+7.Gestión de Archivos de Configuración
+
+Los archivos base.py (en la API) y config.py (en la Visualización) están incluidos en el .gitignore. Esto evita que IPs locales o credenciales privadas se filtren al repositorio.
+
+Para replicar este proyecto, siga estos pasos:
+
+    Localice las plantillas: En las carpetas api/ y visualizacion/ encontrará archivos terminados en .example.
+
+    Cree sus archivos locales:
+
+        En la carpeta api/, ejecute: cp base.py.example base.py
+
+        En la carpeta visualizacion/, ejecute: cp config.py.example config.py
+
+    Configure sus parámetros: Abra los nuevos archivos creados y edite las direcciones IP y credenciales según la configuración de sus propias máquinas virtuales de Multipass.
+
+8. Resumen de archivos en el Git
+
+Para que el docente pueda replicar, tu estructura de Git debe verse así ahora:
+
+    api/
+
+        main.py
+
+        base.py (Oculto por gitignore)
+
+        base.py.example (Visible en GitHub) ✅
+
+    visualizacion/
+
+        app.py
+
+        config.py (Oculto por gitignore)
+
+        config.py.example (Visible en GitHub) ✅
